@@ -1,0 +1,1054 @@
+{
+"ICLR_2019_206": {
+        "Review_1": {
+            "Overall I think this is a solid paper , with an interesting and reasonable approach to quantifying compositionality , and a fairly compelling set of results .": [
+                [
+                    "soundness",
+                    "positive"
+                ]
+            ],
+            "The reported experiments cover reasonable ground in terms of questions relevant to compositionality ( relationship to representation compression , generalization ) , and I appreciate the comparison to human judgments , which lends credibility to applicability of the framework .": [
+                [
+                    "soundness",
+                    "positive"
+                ]
+            ],
+            "The results are generally intuitive and reasonable enough to be credible as indicators of how compositionality relates to aspects of learning , while providing some potential insight .": [
+                [
+                    "soundness",
+                    "positive"
+                ]
+            ],
+            "The paper is clearly written , and to my knowledge the approach is novel .": [
+                [
+                    "originality",
+                    "positive"
+                ],
+                [
+                    "clarity",
+                    "positive"
+                ]
+            ],
+            "There is nothing obviously unreasonable about the choices of composition operator , but it seems that the conclusions drawn can not be construed to apply to compositionality as a general concept , but rather to compositionality when defined by these particular operators .": [
+                [
+                    "soundness",
+                    "negative"
+                ]
+            ],
+            "Despite this limitation , I 'm inclined to say that the introduction of the framework is a solid contribution , and the results presented are interesting .": [
+                [
+                    "originality",
+                    "positive"
+                ]
+            ],
+            "Minor comment : p8 typo : `` training and accuracies `` -- -- -- Reviewer 2 makes a good point that the presentation of the framework could be much clearer , currently obscuring the central role of learning the primitive representations .": [
+                [
+                    "clarity",
+                    "negative"
+                ]
+            ],
+            "This paper describes a framework - Tree Reconstruction Error ( TRE ) - for assessing compositionality of representations by comparing the learned outputs against those of the closest compositional approximation .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "The paper demonstrates the use of this framework to assess the role of compositionality in a hypothetical compression phase of representation learning , compares the correspondence of TRE with human judgments of compositionality of bigrams , provides an explanation of the relationship of the metric to topographic similarity , and uses the framework to draw conclusions about the role of compositionality in model generalization .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "I would say the main limitation to the conclusions that can be drawn from these experiments lies in the necessity of committing to a particular composition operator , of which the authors have selected very simple ones without comparing to others .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Similar limitations apply to the fact that the tests have been run on very specific tasks - it is not clear how these conclusions would generalize to other tasks .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "I think this is a reasonable paper to accept for publication .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "This is something that would benefit from revision .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Reviewer 2 's comments also remind me that , from a perspective of learning composition-ready primitives , Fyshe et al .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "( 2015 ) is a relevant reference here , as it similarly learns primitive ( word ) representations to be compatible with a chosen composition function .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Beyond issues of presentation , it seems that we are all in agreement that the paper 's takeaways would also benefit from an increase in the scope of the experiments .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "I 'm happy to adjust my score to reflect this .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Reference : Fyshe et al .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "( 2015 ) A compositional and interpretable semantic space .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ]
+        },
+        "Review_1_full": "This paper describes a framework - Tree Reconstruction Error ( TRE ) - for assessing compositionality of representations by comparing the learned outputs against those of the closest compositional approximation . The paper demonstrates the use of this framework to assess the role of compositionality in a hypothetical compression phase of representation learning , compares the correspondence of TRE with human judgments of compositionality of bigrams , provides an explanation of the relationship of the metric to topographic similarity , and uses the framework to draw conclusions about the role of compositionality in model generalization . Overall I think this is a solid paper , with an interesting and reasonable approach to quantifying compositionality , and a fairly compelling set of results . The reported experiments cover reasonable ground in terms of questions relevant to compositionality ( relationship to representation compression , generalization ) , and I appreciate the comparison to human judgments , which lends credibility to applicability of the framework . The results are generally intuitive and reasonable enough to be credible as indicators of how compositionality relates to aspects of learning , while providing some potential insight . The paper is clearly written , and to my knowledge the approach is novel . I would say the main limitation to the conclusions that can be drawn from these experiments lies in the necessity of committing to a particular composition operator , of which the authors have selected very simple ones without comparing to others . There is nothing obviously unreasonable about the choices of composition operator , but it seems that the conclusions drawn can not be construed to apply to compositionality as a general concept , but rather to compositionality when defined by these particular operators . Similar limitations apply to the fact that the tests have been run on very specific tasks - it is not clear how these conclusions would generalize to other tasks . Despite this limitation , I 'm inclined to say that the introduction of the framework is a solid contribution , and the results presented are interesting . I think this is a reasonable paper to accept for publication . Minor comment : p8 typo : `` training and accuracies `` -- -- -- Reviewer 2 makes a good point that the presentation of the framework could be much clearer , currently obscuring the central role of learning the primitive representations . This is something that would benefit from revision . Reviewer 2 's comments also remind me that , from a perspective of learning composition-ready primitives , Fyshe et al . ( 2015 ) is a relevant reference here , as it similarly learns primitive ( word ) representations to be compatible with a chosen composition function . Beyond issues of presentation , it seems that we are all in agreement that the paper 's takeaways would also benefit from an increase in the scope of the experiments . I 'm happy to adjust my score to reflect this . Reference : Fyshe et al . ( 2015 ) A compositional and interpretable semantic space .",
+        "Review_2_full": "Edit and a further question : Reading again Section 7 , I 'm wondering whether the the high generalization is possible due to the fact that at test time only one of the two candidates is unseen , and the other is seen . Having * both* candidates to be unseen makes the problem significantly harder since the only way for the listener to get it right is to associate the message with the right candidate , rather than relying in some other strategy like whether the message is novel ( thus it 's the seen candidate ) or new ( thus it 's the unseen candidate ) . As such , I do n't think I can fully trust your conclusions due to this potential confounder . -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- The authors propose a measure of compositionality in representations . Given instances of data x annotated with semantic primitives , the authors learn a vector for each of the primitive such that the addition of the vectors of the primitives is very close ( in terms of cosine ) to the latent representation z of the input x . The authors find that this measure correlates with the mutual information between the input x and z , approximates the human judges of compositionality on a language dataset and finally presents a study on the relation between the proposed measure and generalizalization performance , concluding that their measure correlates with generalization error as well as absolute test accuracy . This in an interesting study and attacks a very fundamental question ; tracking compositionality in representations could pave the way towards representations that facilitate transfer learning and better generalization . While the paper is very clear with respects to results , I found the presentation of the proposed measure overly confusing ( and somewhat more exaggerated that what is really going on ) . The authors start with a very clean example , that can potentially facilitate clarifying in a visual way the process of obtaining the measure . However , I feel that clarity is being traded-off for formality . It needs several reads to really distill the idea that essentially the authors are simply learning vectors of primitives that when added should resemble the representation of the input . Moreover , the name of the measure is a bit misleading and not justified by the experiments and the data . The authors do not deal with trees in any of the examples , but rather with a set of primitives ( apparent in the use of addition as a composition function which being commutative does not allow for word-order and the like deep syntactic properties ) . Now , onto the measure . I like the idea of learning basis vectors from the representations and constraining to follow the primitive semantics . Of course , this constraints quite a bit the form of compositionality that the authors are searching for . The idea of additive semantics has been explored in NLP , however it 's mostly applicable for primitives with intersective semantics ( e.g. , a white towel is something that is both white and a towel ) . Do the authors think that this restricts their experiments ( especially the natural languages ones ) ? What about other composition techniques found in the literature of compositional semantics ( e.g. , by Baroni and Zamparelli , 2010 ) . This is good to be clarified . Moreover , given the simplicity of the datasets in the current study , would n't a reasonable baseline be to obtain the basis vector of blue by averaging all the latent representations of blue ? Similarly , how sensitive are conclusions with respect to different composition functions ? Section 4 is potentially very interesting , but I do n't seem to understand why it 's good news that TRE correlates with I ( x ; \\theta ) . Low TRE indicates high-degree of compositionality . I suspect that low MI means that input and latent representation are somewhat independent but I do n't see the connection to compositional components . Can the authors clarify ? Section 5 is a nice addition . The authors mention that they learn word and phrase representations . Where are the word representations used ? My understanding is that you derive basis word representations by using SGD and the phrase vectors and compute TRE with these . If this is the case , an interesting experiment would be to report how similar the induced basis vectors are ( either some first-order or second-order similarity ) to the pre-trained ones . Section 8 presents results on discrete representations . Since this is the experiment most similar to the recent work that uses topographic similarity ( and since the authors already prime the reader at section 7 about relation between the 2 measures ) , it would be interesting to see the empirical relation between TRE and topographic and its relation to generalization and absolute performance . Baroni and Zamparelli ( 2010 ) Nouns are vectors , adjectives are matrices : Representing adjective-noun constructions in semantic space",
+        "Review_2": {
+            "This in an interesting study and attacks a very fundamental question ; tracking compositionality in representations could pave the way towards representations that facilitate transfer learning and better generalization .": [
+                [
+                    "motivation",
+                    "positive"
+                ]
+            ],
+            "While the paper is very clear with respects to results , I found the presentation of the proposed measure overly confusing ( and somewhat more exaggerated that what is really going on ) .": [
+                [
+                    "clarity",
+                    "negative"
+                ],
+                [
+                    "clarity",
+                    "positive"
+                ]
+            ],
+            "It needs several reads to really distill the idea that essentially the authors are simply learning vectors of primitives that when added should resemble the representation of the input .": [
+                [
+                    "clarity",
+                    "negative"
+                ]
+            ],
+            "Moreover , the name of the measure is a bit misleading and not justified by the experiments and the data .": [
+                [
+                    "clarity",
+                    "negative"
+                ]
+            ],
+            "I like the idea of learning basis vectors from the representations and constraining to follow the primitive semantics .": [
+                [
+                    "originality",
+                    "positive"
+                ]
+            ],
+            "Edit and a further question : Reading again Section 7 , I 'm wondering whether the the high generalization is possible due to the fact that at test time only one of the two candidates is unseen , and the other is seen .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Having * both* candidates to be unseen makes the problem significantly harder since the only way for the listener to get it right is to associate the message with the right candidate , rather than relying in some other strategy like whether the message is novel ( thus it 's the seen candidate ) or new ( thus it 's the unseen candidate ) .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "As such , I do n't think I can fully trust your conclusions due to this potential confounder .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- The authors propose a measure of compositionality in representations .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Given instances of data x annotated with semantic primitives , the authors learn a vector for each of the primitive such that the addition of the vectors of the primitives is very close ( in terms of cosine ) to the latent representation z of the input x .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "The authors find that this measure correlates with the mutual information between the input x and z , approximates the human judges of compositionality on a language dataset and finally presents a study on the relation between the proposed measure and generalizalization performance , concluding that their measure correlates with generalization error as well as absolute test accuracy .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "The authors start with a very clean example , that can potentially facilitate clarifying in a visual way the process of obtaining the measure .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "However , I feel that clarity is being traded-off for formality .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "The authors do not deal with trees in any of the examples , but rather with a set of primitives ( apparent in the use of addition as a composition function which being commutative does not allow for word-order and the like deep syntactic properties ) .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Now , onto the measure .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Of course , this constraints quite a bit the form of compositionality that the authors are searching for .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "The idea of additive semantics has been explored in NLP , however it 's mostly applicable for primitives with intersective semantics ( e.g.": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            ", a white towel is something that is both white and a towel ) .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Do the authors think that this restricts their experiments ( especially the natural languages ones ) ?": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "What about other composition techniques found in the literature of compositional semantics ( e.g.": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            ", by Baroni and Zamparelli , 2010 ) .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "This is good to be clarified .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Moreover , given the simplicity of the datasets in the current study , would n't a reasonable baseline be to obtain the basis vector of blue by averaging all the latent representations of blue ?": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Similarly , how sensitive are conclusions with respect to different composition functions ?": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Section 4 is potentially very interesting , but I do n't seem to understand why it 's good news that TRE correlates with I ( x ; \\theta ) .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Low TRE indicates high-degree of compositionality .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "I suspect that low MI means that input and latent representation are somewhat independent but I do n't see the connection to compositional components .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Can the authors clarify ?": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Section 5 is a nice addition .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "The authors mention that they learn word and phrase representations .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Where are the word representations used ?": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "My understanding is that you derive basis word representations by using SGD and the phrase vectors and compute TRE with these .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "If this is the case , an interesting experiment would be to report how similar the induced basis vectors are ( either some first-order or second-order similarity ) to the pre-trained ones .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Section 8 presents results on discrete representations .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Since this is the experiment most similar to the recent work that uses topographic similarity ( and since the authors already prime the reader at section 7 about relation between the 2 measures ) , it would be interesting to see the empirical relation between TRE and topographic and its relation to generalization and absolute performance .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Baroni and Zamparelli ( 2010 ) Nouns are vectors , adjectives are matrices : Representing adjective-noun constructions in semantic space": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ]
+        },
+        "Review_4_full": "The paper tackles a very interesting problem about representations , especially of the connectionist kind -- how do we know if the learned representations capture the compositional structure present in the inputs , and tries to come up with a systematic framework to answer that question . The framework assumes the presence of an oracle that can give us the true compositional structure . Then the author try to answer some refreshing questions about the dynamics of learning and compositionality while citing some interesting background reading . However , I \u2019 m a bit torn about the experiments . On the one hand , I like the pedagogical nature of the experiments . They are small and should be easy to reproduce . On the other hand , all of them seem to be fairly similar kinds of composition with very few attributes ( mostly bigrams ) . So whether the intuitions hold for more complex compositional structures is hard to say . Nevertheless , it \u2019 s a well written paper and is a helpful first step towards studying the problem of compositionality in vector representations . Minor points Pg 3 \u201c _grammar_ for composing meanings * where* licensed by derivations \u201d seems incorrect . Figure 5 : seems quite noisy to make the linear relationship claim EDIT : I still think the compositions under consideration are the simpler ones . Still with the new experiments the coverage seems nicer . Given the authors plan to release their source code , I expect there will be an opportunity for the rest of the community to build on these , to test TRE 's efficacy on more complex compositions . I updated my scores to reflect the change .",
+        "Review_4": {
+            "Nevertheless , it \u2019 s a well written paper and is a helpful first step towards studying the problem of compositionality in vector representations .": [
+                [
+                    "motivation",
+                    "positive"
+                ],
+                [
+                    "clarity",
+                    "positive"
+                ]
+            ],
+            "The paper tackles a very interesting problem about representations , especially of the connectionist kind -- how do we know if the learned representations capture the compositional structure present in the inputs , and tries to come up with a systematic framework to answer that question .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "The framework assumes the presence of an oracle that can give us the true compositional structure .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Then the author try to answer some refreshing questions about the dynamics of learning and compositionality while citing some interesting background reading .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "However , I \u2019 m a bit torn about the experiments .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "On the one hand , I like the pedagogical nature of the experiments .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "They are small and should be easy to reproduce .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "On the other hand , all of them seem to be fairly similar kinds of composition with very few attributes ( mostly bigrams ) .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "So whether the intuitions hold for more complex compositional structures is hard to say .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Minor points Pg 3 \u201c _grammar_ for composing meanings * where* licensed by derivations \u201d seems incorrect .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Figure 5 : seems quite noisy to make the linear relationship claim EDIT : I still think the compositions under consideration are the simpler ones .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Still with the new experiments the coverage seems nicer .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "Given the authors plan to release their source code , I expect there will be an opportunity for the rest of the community to build on these , to test TRE 's efficacy on more complex compositions .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ],
+            "I updated my scores to reflect the change .": [
+                [
+                    "no_aspect",
+                    "no_sentiment"
+                ]
+            ]
+        },
+        "review_pairs": [
+            [
+                "This paper describes a framework - Tree Reconstruction Error ( TRE ) - for assessing compositionality of representations by comparing the learned outputs against those of the closest compositional approximation . The paper demonstrates the use of this framework to assess the role of compositionality in a hypothetical compression phase of representation learning , compares the correspondence of TRE with human judgments of compositionality of bigrams , provides an explanation of the relationship of the metric to topographic similarity , and uses the framework to draw conclusions about the role of compositionality in model generalization . Overall I think this is a solid paper , with an interesting and reasonable approach to quantifying compositionality , and a fairly compelling set of results . The reported experiments cover reasonable ground in terms of questions relevant to compositionality ( relationship to representation compression , generalization ) , and I appreciate the comparison to human judgments , which lends credibility to applicability of the framework . The results are generally intuitive and reasonable enough to be credible as indicators of how compositionality relates to aspects of learning , while providing some potential insight . The paper is clearly written , and to my knowledge the approach is novel . I would say the main limitation to the conclusions that can be drawn from these experiments lies in the necessity of committing to a particular composition operator , of which the authors have selected very simple ones without comparing to others . There is nothing obviously unreasonable about the choices of composition operator , but it seems that the conclusions drawn can not be construed to apply to compositionality as a general concept , but rather to compositionality when defined by these particular operators . Similar limitations apply to the fact that the tests have been run on very specific tasks - it is not clear how these conclusions would generalize to other tasks . Despite this limitation , I 'm inclined to say that the introduction of the framework is a solid contribution , and the results presented are interesting . I think this is a reasonable paper to accept for publication . Minor comment : p8 typo : `` training and accuracies `` -- -- -- Reviewer 2 makes a good point that the presentation of the framework could be much clearer , currently obscuring the central role of learning the primitive representations . This is something that would benefit from revision . Reviewer 2 's comments also remind me that , from a perspective of learning composition-ready primitives , Fyshe et al . ( 2015 ) is a relevant reference here , as it similarly learns primitive ( word ) representations to be compatible with a chosen composition function . Beyond issues of presentation , it seems that we are all in agreement that the paper 's takeaways would also benefit from an increase in the scope of the experiments . I 'm happy to adjust my score to reflect this . Reference : Fyshe et al . ( 2015 ) A compositional and interpretable semantic space .",
+                "Edit and a further question : Reading again Section 7 , I 'm wondering whether the the high generalization is possible due to the fact that at test time only one of the two candidates is unseen , and the other is seen . Having * both* candidates to be unseen makes the problem significantly harder since the only way for the listener to get it right is to associate the message with the right candidate , rather than relying in some other strategy like whether the message is novel ( thus it 's the seen candidate ) or new ( thus it 's the unseen candidate ) . As such , I do n't think I can fully trust your conclusions due to this potential confounder . -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- The authors propose a measure of compositionality in representations . Given instances of data x annotated with semantic primitives , the authors learn a vector for each of the primitive such that the addition of the vectors of the primitives is very close ( in terms of cosine ) to the latent representation z of the input x . The authors find that this measure correlates with the mutual information between the input x and z , approximates the human judges of compositionality on a language dataset and finally presents a study on the relation between the proposed measure and generalizalization performance , concluding that their measure correlates with generalization error as well as absolute test accuracy . This in an interesting study and attacks a very fundamental question ; tracking compositionality in representations could pave the way towards representations that facilitate transfer learning and better generalization . While the paper is very clear with respects to results , I found the presentation of the proposed measure overly confusing ( and somewhat more exaggerated that what is really going on ) . The authors start with a very clean example , that can potentially facilitate clarifying in a visual way the process of obtaining the measure . However , I feel that clarity is being traded-off for formality . It needs several reads to really distill the idea that essentially the authors are simply learning vectors of primitives that when added should resemble the representation of the input . Moreover , the name of the measure is a bit misleading and not justified by the experiments and the data . The authors do not deal with trees in any of the examples , but rather with a set of primitives ( apparent in the use of addition as a composition function which being commutative does not allow for word-order and the like deep syntactic properties ) . Now , onto the measure . I like the idea of learning basis vectors from the representations and constraining to follow the primitive semantics . Of course , this constraints quite a bit the form of compositionality that the authors are searching for . The idea of additive semantics has been explored in NLP , however it 's mostly applicable for primitives with intersective semantics ( e.g. , a white towel is something that is both white and a towel ) . Do the authors think that this restricts their experiments ( especially the natural languages ones ) ? What about other composition techniques found in the literature of compositional semantics ( e.g. , by Baroni and Zamparelli , 2010 ) . This is good to be clarified . Moreover , given the simplicity of the datasets in the current study , would n't a reasonable baseline be to obtain the basis vector of blue by averaging all the latent representations of blue ? Similarly , how sensitive are conclusions with respect to different composition functions ? Section 4 is potentially very interesting , but I do n't seem to understand why it 's good news that TRE correlates with I ( x ; \\theta ) . Low TRE indicates high-degree of compositionality . I suspect that low MI means that input and latent representation are somewhat independent but I do n't see the connection to compositional components . Can the authors clarify ? Section 5 is a nice addition . The authors mention that they learn word and phrase representations . Where are the word representations used ? My understanding is that you derive basis word representations by using SGD and the phrase vectors and compute TRE with these . If this is the case , an interesting experiment would be to report how similar the induced basis vectors are ( either some first-order or second-order similarity ) to the pre-trained ones . Section 8 presents results on discrete representations . Since this is the experiment most similar to the recent work that uses topographic similarity ( and since the authors already prime the reader at section 7 about relation between the 2 measures ) , it would be interesting to see the empirical relation between TRE and topographic and its relation to generalization and absolute performance . Baroni and Zamparelli ( 2010 ) Nouns are vectors , adjectives are matrices : Representing adjective-noun constructions in semantic space"
+            ],
+            [
+                "This paper describes a framework - Tree Reconstruction Error ( TRE ) - for assessing compositionality of representations by comparing the learned outputs against those of the closest compositional approximation . The paper demonstrates the use of this framework to assess the role of compositionality in a hypothetical compression phase of representation learning , compares the correspondence of TRE with human judgments of compositionality of bigrams , provides an explanation of the relationship of the metric to topographic similarity , and uses the framework to draw conclusions about the role of compositionality in model generalization . Overall I think this is a solid paper , with an interesting and reasonable approach to quantifying compositionality , and a fairly compelling set of results . The reported experiments cover reasonable ground in terms of questions relevant to compositionality ( relationship to representation compression , generalization ) , and I appreciate the comparison to human judgments , which lends credibility to applicability of the framework . The results are generally intuitive and reasonable enough to be credible as indicators of how compositionality relates to aspects of learning , while providing some potential insight . The paper is clearly written , and to my knowledge the approach is novel . I would say the main limitation to the conclusions that can be drawn from these experiments lies in the necessity of committing to a particular composition operator , of which the authors have selected very simple ones without comparing to others . There is nothing obviously unreasonable about the choices of composition operator , but it seems that the conclusions drawn can not be construed to apply to compositionality as a general concept , but rather to compositionality when defined by these particular operators . Similar limitations apply to the fact that the tests have been run on very specific tasks - it is not clear how these conclusions would generalize to other tasks . Despite this limitation , I 'm inclined to say that the introduction of the framework is a solid contribution , and the results presented are interesting . I think this is a reasonable paper to accept for publication . Minor comment : p8 typo : `` training and accuracies `` -- -- -- Reviewer 2 makes a good point that the presentation of the framework could be much clearer , currently obscuring the central role of learning the primitive representations . This is something that would benefit from revision . Reviewer 2 's comments also remind me that , from a perspective of learning composition-ready primitives , Fyshe et al . ( 2015 ) is a relevant reference here , as it similarly learns primitive ( word ) representations to be compatible with a chosen composition function . Beyond issues of presentation , it seems that we are all in agreement that the paper 's takeaways would also benefit from an increase in the scope of the experiments . I 'm happy to adjust my score to reflect this . Reference : Fyshe et al . ( 2015 ) A compositional and interpretable semantic space .",
+                "The paper tackles a very interesting problem about representations , especially of the connectionist kind -- how do we know if the learned representations capture the compositional structure present in the inputs , and tries to come up with a systematic framework to answer that question . The framework assumes the presence of an oracle that can give us the true compositional structure . Then the author try to answer some refreshing questions about the dynamics of learning and compositionality while citing some interesting background reading . However , I \u2019 m a bit torn about the experiments . On the one hand , I like the pedagogical nature of the experiments . They are small and should be easy to reproduce . On the other hand , all of them seem to be fairly similar kinds of composition with very few attributes ( mostly bigrams ) . So whether the intuitions hold for more complex compositional structures is hard to say . Nevertheless , it \u2019 s a well written paper and is a helpful first step towards studying the problem of compositionality in vector representations . Minor points Pg 3 \u201c _grammar_ for composing meanings * where* licensed by derivations \u201d seems incorrect . Figure 5 : seems quite noisy to make the linear relationship claim EDIT : I still think the compositions under consideration are the simpler ones . Still with the new experiments the coverage seems nicer . Given the authors plan to release their source code , I expect there will be an opportunity for the rest of the community to build on these , to test TRE 's efficacy on more complex compositions . I updated my scores to reflect the change ."
+            ],
+            [
+                "Edit and a further question : Reading again Section 7 , I 'm wondering whether the the high generalization is possible due to the fact that at test time only one of the two candidates is unseen , and the other is seen . Having * both* candidates to be unseen makes the problem significantly harder since the only way for the listener to get it right is to associate the message with the right candidate , rather than relying in some other strategy like whether the message is novel ( thus it 's the seen candidate ) or new ( thus it 's the unseen candidate ) . As such , I do n't think I can fully trust your conclusions due to this potential confounder . -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- The authors propose a measure of compositionality in representations . Given instances of data x annotated with semantic primitives , the authors learn a vector for each of the primitive such that the addition of the vectors of the primitives is very close ( in terms of cosine ) to the latent representation z of the input x . The authors find that this measure correlates with the mutual information between the input x and z , approximates the human judges of compositionality on a language dataset and finally presents a study on the relation between the proposed measure and generalizalization performance , concluding that their measure correlates with generalization error as well as absolute test accuracy . This in an interesting study and attacks a very fundamental question ; tracking compositionality in representations could pave the way towards representations that facilitate transfer learning and better generalization . While the paper is very clear with respects to results , I found the presentation of the proposed measure overly confusing ( and somewhat more exaggerated that what is really going on ) . The authors start with a very clean example , that can potentially facilitate clarifying in a visual way the process of obtaining the measure . However , I feel that clarity is being traded-off for formality . It needs several reads to really distill the idea that essentially the authors are simply learning vectors of primitives that when added should resemble the representation of the input . Moreover , the name of the measure is a bit misleading and not justified by the experiments and the data . The authors do not deal with trees in any of the examples , but rather with a set of primitives ( apparent in the use of addition as a composition function which being commutative does not allow for word-order and the like deep syntactic properties ) . Now , onto the measure . I like the idea of learning basis vectors from the representations and constraining to follow the primitive semantics . Of course , this constraints quite a bit the form of compositionality that the authors are searching for . The idea of additive semantics has been explored in NLP , however it 's mostly applicable for primitives with intersective semantics ( e.g. , a white towel is something that is both white and a towel ) . Do the authors think that this restricts their experiments ( especially the natural languages ones ) ? What about other composition techniques found in the literature of compositional semantics ( e.g. , by Baroni and Zamparelli , 2010 ) . This is good to be clarified . Moreover , given the simplicity of the datasets in the current study , would n't a reasonable baseline be to obtain the basis vector of blue by averaging all the latent representations of blue ? Similarly , how sensitive are conclusions with respect to different composition functions ? Section 4 is potentially very interesting , but I do n't seem to understand why it 's good news that TRE correlates with I ( x ; \\theta ) . Low TRE indicates high-degree of compositionality . I suspect that low MI means that input and latent representation are somewhat independent but I do n't see the connection to compositional components . Can the authors clarify ? Section 5 is a nice addition . The authors mention that they learn word and phrase representations . Where are the word representations used ? My understanding is that you derive basis word representations by using SGD and the phrase vectors and compute TRE with these . If this is the case , an interesting experiment would be to report how similar the induced basis vectors are ( either some first-order or second-order similarity ) to the pre-trained ones . Section 8 presents results on discrete representations . Since this is the experiment most similar to the recent work that uses topographic similarity ( and since the authors already prime the reader at section 7 about relation between the 2 measures ) , it would be interesting to see the empirical relation between TRE and topographic and its relation to generalization and absolute performance . Baroni and Zamparelli ( 2010 ) Nouns are vectors , adjectives are matrices : Representing adjective-noun constructions in semantic space",
+                "The paper tackles a very interesting problem about representations , especially of the connectionist kind -- how do we know if the learned representations capture the compositional structure present in the inputs , and tries to come up with a systematic framework to answer that question . The framework assumes the presence of an oracle that can give us the true compositional structure . Then the author try to answer some refreshing questions about the dynamics of learning and compositionality while citing some interesting background reading . However , I \u2019 m a bit torn about the experiments . On the one hand , I like the pedagogical nature of the experiments . They are small and should be easy to reproduce . On the other hand , all of them seem to be fairly similar kinds of composition with very few attributes ( mostly bigrams ) . So whether the intuitions hold for more complex compositional structures is hard to say . Nevertheless , it \u2019 s a well written paper and is a helpful first step towards studying the problem of compositionality in vector representations . Minor points Pg 3 \u201c _grammar_ for composing meanings * where* licensed by derivations \u201d seems incorrect . Figure 5 : seems quite noisy to make the linear relationship claim EDIT : I still think the compositions under consideration are the simpler ones . Still with the new experiments the coverage seems nicer . Given the authors plan to release their source code , I expect there will be an opportunity for the rest of the community to build on these , to test TRE 's efficacy on more complex compositions . I updated my scores to reflect the change ."
+            ]
+        ],
+        "pair_analysis": [
+            {
+                "pair_number": 1,
+                "review_pair": [
+                    "This paper describes a framework - Tree Reconstruction Error ( TRE ) - for assessing compositionality of representations by comparing the learned outputs against those of the closest compositional approximation . The paper demonstrates the use of this framework to assess the role of compositionality in a hypothetical compression phase of representation learning , compares the correspondence of TRE with human judgments of compositionality of bigrams , provides an explanation of the relationship of the metric to topographic similarity , and uses the framework to draw conclusions about the role of compositionality in model generalization . Overall I think this is a solid paper , with an interesting and reasonable approach to quantifying compositionality , and a fairly compelling set of results . The reported experiments cover reasonable ground in terms of questions relevant to compositionality ( relationship to representation compression , generalization ) , and I appreciate the comparison to human judgments , which lends credibility to applicability of the framework . The results are generally intuitive and reasonable enough to be credible as indicators of how compositionality relates to aspects of learning , while providing some potential insight . The paper is clearly written , and to my knowledge the approach is novel . I would say the main limitation to the conclusions that can be drawn from these experiments lies in the necessity of committing to a particular composition operator , of which the authors have selected very simple ones without comparing to others . There is nothing obviously unreasonable about the choices of composition operator , but it seems that the conclusions drawn can not be construed to apply to compositionality as a general concept , but rather to compositionality when defined by these particular operators . Similar limitations apply to the fact that the tests have been run on very specific tasks - it is not clear how these conclusions would generalize to other tasks . Despite this limitation , I 'm inclined to say that the introduction of the framework is a solid contribution , and the results presented are interesting . I think this is a reasonable paper to accept for publication . Minor comment : p8 typo : `` training and accuracies `` -- -- -- Reviewer 2 makes a good point that the presentation of the framework could be much clearer , currently obscuring the central role of learning the primitive representations . This is something that would benefit from revision . Reviewer 2 's comments also remind me that , from a perspective of learning composition-ready primitives , Fyshe et al . ( 2015 ) is a relevant reference here , as it similarly learns primitive ( word ) representations to be compatible with a chosen composition function . Beyond issues of presentation , it seems that we are all in agreement that the paper 's takeaways would also benefit from an increase in the scope of the experiments . I 'm happy to adjust my score to reflect this . Reference : Fyshe et al . ( 2015 ) A compositional and interpretable semantic space .",
+                    "Edit and a further question : Reading again Section 7 , I 'm wondering whether the the high generalization is possible due to the fact that at test time only one of the two candidates is unseen , and the other is seen . Having * both* candidates to be unseen makes the problem significantly harder since the only way for the listener to get it right is to associate the message with the right candidate , rather than relying in some other strategy like whether the message is novel ( thus it 's the seen candidate ) or new ( thus it 's the unseen candidate ) . As such , I do n't think I can fully trust your conclusions due to this potential confounder . -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- The authors propose a measure of compositionality in representations . Given instances of data x annotated with semantic primitives , the authors learn a vector for each of the primitive such that the addition of the vectors of the primitives is very close ( in terms of cosine ) to the latent representation z of the input x . The authors find that this measure correlates with the mutual information between the input x and z , approximates the human judges of compositionality on a language dataset and finally presents a study on the relation between the proposed measure and generalizalization performance , concluding that their measure correlates with generalization error as well as absolute test accuracy . This in an interesting study and attacks a very fundamental question ; tracking compositionality in representations could pave the way towards representations that facilitate transfer learning and better generalization . While the paper is very clear with respects to results , I found the presentation of the proposed measure overly confusing ( and somewhat more exaggerated that what is really going on ) . The authors start with a very clean example , that can potentially facilitate clarifying in a visual way the process of obtaining the measure . However , I feel that clarity is being traded-off for formality . It needs several reads to really distill the idea that essentially the authors are simply learning vectors of primitives that when added should resemble the representation of the input . Moreover , the name of the measure is a bit misleading and not justified by the experiments and the data . The authors do not deal with trees in any of the examples , but rather with a set of primitives ( apparent in the use of addition as a composition function which being commutative does not allow for word-order and the like deep syntactic properties ) . Now , onto the measure . I like the idea of learning basis vectors from the representations and constraining to follow the primitive semantics . Of course , this constraints quite a bit the form of compositionality that the authors are searching for . The idea of additive semantics has been explored in NLP , however it 's mostly applicable for primitives with intersective semantics ( e.g. , a white towel is something that is both white and a towel ) . Do the authors think that this restricts their experiments ( especially the natural languages ones ) ? What about other composition techniques found in the literature of compositional semantics ( e.g. , by Baroni and Zamparelli , 2010 ) . This is good to be clarified . Moreover , given the simplicity of the datasets in the current study , would n't a reasonable baseline be to obtain the basis vector of blue by averaging all the latent representations of blue ? Similarly , how sensitive are conclusions with respect to different composition functions ? Section 4 is potentially very interesting , but I do n't seem to understand why it 's good news that TRE correlates with I ( x ; \\theta ) . Low TRE indicates high-degree of compositionality . I suspect that low MI means that input and latent representation are somewhat independent but I do n't see the connection to compositional components . Can the authors clarify ? Section 5 is a nice addition . The authors mention that they learn word and phrase representations . Where are the word representations used ? My understanding is that you derive basis word representations by using SGD and the phrase vectors and compute TRE with these . If this is the case , an interesting experiment would be to report how similar the induced basis vectors are ( either some first-order or second-order similarity ) to the pre-trained ones . Section 8 presents results on discrete representations . Since this is the experiment most similar to the recent work that uses topographic similarity ( and since the authors already prime the reader at section 7 about relation between the 2 measures ) , it would be interesting to see the empirical relation between TRE and topographic and its relation to generalization and absolute performance . Baroni and Zamparelli ( 2010 ) Nouns are vectors , adjectives are matrices : Representing adjective-noun constructions in semantic space"
+                ],
+                "analysis": [
+                    {
+                        "contradiction": "Review 1 states that the paper is clearly written, while Review 2 claims the presentation is overly confusing.",
+                        "aspect": "clarity",
+                        "evidence": [
+                            "The paper is clearly written.",
+                            "I found the presentation of the proposed measure overly confusing."
+                        ],
+                        "intensity": {
+                            "score": 2,
+                            "justification": "The reviews present moderate differences in opinion regarding clarity; one reviewer finds the paper clear while the other finds it confusing. This suggests a substantive difference that could potentially be addressed with clarification or revisions, but it is not fundamentally irreconcilable."
+                        }
+                    },
+                    {
+                        "contradiction": "Review 1 suggests the framework's conclusions are solid contributions, whereas Review 2 expresses doubt about the conclusions due to potential confounding factors.",
+                        "aspect": "soundness",
+                        "evidence": [
+                            "Despite this limitation, I'm inclined to say that the introduction of the framework is a solid contribution.",
+                            "I don't think I can fully trust your conclusions due to this potential confounder."
+                        ],
+                        "intensity": {
+                            "score": 2,
+                            "justification": "The reviews present moderate differences in opinion regarding the soundness of the framework's conclusions due to potential confounding factors. While one review supports the contribution, the other raises significant concerns that could be addressed with additional clarification or data."
+                        }
+                    },
+                    {
+                        "contradiction": "Review 1 appreciates the comparison to human judgments, while Review 2 criticizes the measure's justification in relation to experiments.",
+                        "aspect": "meaningful comparison",
+                        "evidence": [
+                            "I appreciate the comparison to human judgments, which lends credibility to applicability of the framework.",
+                            "The name of the measure is a bit misleading and not justified by the experiments and the data."
+                        ],
+                        "intensity": {
+                            "score": 2,
+                            "justification": "The reviews present moderate differences regarding the measure's justification and comparison to human judgments. While one review values the comparison, the other finds it misleading and unjustified, indicating a substantive disagreement that could be clarified with additional data or adjustments."
+                        }
+                    },
+                    {
+                        "contradiction": "Review 1 indicates that the reported experiments cover reasonable ground, while Review 2 suggests that the experiments would benefit from an increase in scope.",
+                        "aspect": "substance",
+                        "evidence": [
+                            "The reported experiments cover reasonable ground in terms of questions relevant to compositionality.",
+                            "The paper's takeaways would also benefit from an increase in the scope of the experiments."
+                        ],
+                        "intensity": {
+                            "score": 2,
+                            "justification": "The reviews present moderate differences in opinion regarding the scope of the experiments. While one review finds the coverage reasonable, the other suggests it could be expanded. This indicates a substantive difference that could be addressed with additional data or clarification."
+                        }
+                    }
+                ],
+                "additional_analysis": [
+                    {
+                        "contradiction": "Reviewer 1 acknowledges the limitation of focusing on specific composition operators (addition in this case) but doesn't strongly advocate for exploring alternatives. Reviewer 2 explicitly criticizes the limitation of focusing on additive semantics and strongly suggests exploring other composition techniques found in the literature.",
+                        "aspect": "Scope of Compositionality",
+                        "evidence": [
+                            "Reviewer 1: 'conclusions drawn can not be construed to apply to compositionality as a general concept, but rather to compositionality when defined by these particular operators.'",
+                            "Reviewer 2: 'What about other composition techniques found in the literature of compositional semantics (e.g., by Baroni and Zamparelli, 2010 ) . This is good to be clarified.'"
+                        ],
+                        "intensity": {
+                            "score": 3,
+                            "justification": "This contradiction highlights a fundamental disagreement on the scope of the research. Reviewer 1 acknowledges the limitation but doesn't strongly advocate for addressing it, while Reviewer 2 explicitly criticizes the limitation and strongly suggests exploring alternative composition techniques. This disagreement has significant implications for the future directions of the research and the generalizability of the findings."
+                        }
+                    }
+                ],
+                "gpt-4 analysis": [
+                    {
+                        "analysis": [
+                            {
+                                "contradiction": "Review 1 finds the paper clearly written, whereas Review 2 claims the presentation is overly confusing.",
+                                "aspect": "Clarity of Presentation",
+                                "evidence": [
+                                    "The paper is clearly written.",
+                                    "I found the presentation of the proposed measure overly confusing."
+                                ],
+                                "intensity": {
+                                    "score": 3,
+                                    "justification": "There is a high contrast between the reviewers' perceptions of the paper's clarity, indicating a significant contradiction. This contradiction could influence the paper's accessibility and understanding among its readers, suggesting a need for the authors to revise for greater clarity and conciseness."
+                                }
+                            },
+                            {
+                                "contradiction": "Review 1 suggests the conclusions about generalization are credible, while Review 2 questions the experimental design's ability to support these conclusions.",
+                                "aspect": "Generalization of Conclusions",
+                                "evidence": [
+                                    "The results are generally intuitive and reasonable enough to be credible as indicators of how compositionality relates to aspects of learning.",
+                                    "I don't think I can fully trust your conclusions due to this potential confounder."
+                                ],
+                                "intensity": {
+                                    "score": 3,
+                                    "justification": "The contradiction here is significant as it affects the credibility and trust in the research outcomes. Review 2's doubts about the experimental design impacting generalization raise crucial concerns that might necessitate further validation or additional experiments."
+                                }
+                            },
+                            {
+                                "contradiction": "Review 1 does not comment on the specifics of the composition techniques, implying acceptance, while Review 2 criticizes the simplicity and applicability of the composition techniques used.",
+                                "aspect": "Appropriateness of Composition Techniques",
+                                "evidence": [
+                                    "Implicit acceptance by not commenting on it.",
+                                    "Do the authors think that this restricts their experiments?"
+                                ],
+                                "intensity": {
+                                    "score": 1,
+                                    "justification": "This presents a moderate contradiction, where Review 2's concerns about the chosen composition techniques may suggest limitations in the framework's applicability to broader linguistic contexts. This could potentially be addressed by incorporating a wider range of composition techniques."
+                                }
+                            },
+                            {
+                                "contradiction": "Review 1 finds the experiments adequately cover relevant questions, while Review 2 suggests increasing the scope of experiments.",
+                                "aspect": "Experimental Design and Rigor",
+                                "evidence": [
+                                    "The reported experiments cover reasonable ground in terms of questions relevant to compositionality.",
+                                    "The paper's takeaways would also benefit from an increase in the scope of the experiments."
+                                ],
+                                "intensity": {
+                                    "score": 2,
+                                    "justification": "There is a moderate contradiction regarding the sufficiency of the experimental design. While Review 1 is satisfied with the scope, Review 2 calls for a broader and possibly more rigorous experimental approach, suggesting that the scope may be too narrow to fully support the claims made."
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "pair_number": 2,
+                "review_pair": [
+                    "This paper describes a framework - Tree Reconstruction Error ( TRE ) - for assessing compositionality of representations by comparing the learned outputs against those of the closest compositional approximation . The paper demonstrates the use of this framework to assess the role of compositionality in a hypothetical compression phase of representation learning , compares the correspondence of TRE with human judgments of compositionality of bigrams , provides an explanation of the relationship of the metric to topographic similarity , and uses the framework to draw conclusions about the role of compositionality in model generalization . Overall I think this is a solid paper , with an interesting and reasonable approach to quantifying compositionality , and a fairly compelling set of results . The reported experiments cover reasonable ground in terms of questions relevant to compositionality ( relationship to representation compression , generalization ) , and I appreciate the comparison to human judgments , which lends credibility to applicability of the framework . The results are generally intuitive and reasonable enough to be credible as indicators of how compositionality relates to aspects of learning , while providing some potential insight . The paper is clearly written , and to my knowledge the approach is novel . I would say the main limitation to the conclusions that can be drawn from these experiments lies in the necessity of committing to a particular composition operator , of which the authors have selected very simple ones without comparing to others . There is nothing obviously unreasonable about the choices of composition operator , but it seems that the conclusions drawn can not be construed to apply to compositionality as a general concept , but rather to compositionality when defined by these particular operators . Similar limitations apply to the fact that the tests have been run on very specific tasks - it is not clear how these conclusions would generalize to other tasks . Despite this limitation , I 'm inclined to say that the introduction of the framework is a solid contribution , and the results presented are interesting . I think this is a reasonable paper to accept for publication . Minor comment : p8 typo : `` training and accuracies `` -- -- -- Reviewer 2 makes a good point that the presentation of the framework could be much clearer , currently obscuring the central role of learning the primitive representations . This is something that would benefit from revision . Reviewer 2 's comments also remind me that , from a perspective of learning composition-ready primitives , Fyshe et al . ( 2015 ) is a relevant reference here , as it similarly learns primitive ( word ) representations to be compatible with a chosen composition function . Beyond issues of presentation , it seems that we are all in agreement that the paper 's takeaways would also benefit from an increase in the scope of the experiments . I 'm happy to adjust my score to reflect this . Reference : Fyshe et al . ( 2015 ) A compositional and interpretable semantic space .",
+                    "The paper tackles a very interesting problem about representations , especially of the connectionist kind -- how do we know if the learned representations capture the compositional structure present in the inputs , and tries to come up with a systematic framework to answer that question . The framework assumes the presence of an oracle that can give us the true compositional structure . Then the author try to answer some refreshing questions about the dynamics of learning and compositionality while citing some interesting background reading . However , I \u2019 m a bit torn about the experiments . On the one hand , I like the pedagogical nature of the experiments . They are small and should be easy to reproduce . On the other hand , all of them seem to be fairly similar kinds of composition with very few attributes ( mostly bigrams ) . So whether the intuitions hold for more complex compositional structures is hard to say . Nevertheless , it \u2019 s a well written paper and is a helpful first step towards studying the problem of compositionality in vector representations . Minor points Pg 3 \u201c _grammar_ for composing meanings * where* licensed by derivations \u201d seems incorrect . Figure 5 : seems quite noisy to make the linear relationship claim EDIT : I still think the compositions under consideration are the simpler ones . Still with the new experiments the coverage seems nicer . Given the authors plan to release their source code , I expect there will be an opportunity for the rest of the community to build on these , to test TRE 's efficacy on more complex compositions . I updated my scores to reflect the change ."
+                ],
+                "analysis": [
+                    {
+                        "contradiction": "Reviewer 1 believes the paper is a solid contribution and reasonable enough to be accepted, while Reviewer 2 expresses uncertainty about the experiments and suggests they are too simplistic.",
+                        "aspect": "soundness",
+                        "evidence": [
+                            "Overall I think this is a solid paper ... I think this is a reasonable paper to accept for publication.",
+                            "On the other hand, all of them seem to be fairly similar kinds of composition with very few attributes ... whether the intuitions hold for more complex compositional structures is hard to say."
+                        ],
+                        "intensity": {
+                            "score": 2,
+                            "justification": "The disagreement between the reviewers is substantive, with Reviewer 1 supporting the paper's soundness and Reviewer 2 questioning the experiments' complexity. This indicates a moderate difference that could be addressed with additional data or clarification."
+                        }
+                    },
+                    {
+                        "contradiction": "Reviewer 1 states the paper is clearly written and the approach is novel, while Reviewer 2 suggests the presentation of the framework could be much clearer.",
+                        "aspect": "clarity",
+                        "evidence": [
+                            "The paper is clearly written, and to my knowledge the approach is novel.",
+                            "Reviewer 2 makes a good point that the presentation of the framework could be much clearer."
+                        ],
+                        "intensity": {
+                            "score": 2,
+                            "justification": "There is a moderate difference in opinion regarding the clarity of the presentation. While one reviewer finds the paper clearly written, the other points out a specific area for improvement. This indicates a substantive difference that can be addressed with clarification or adjustments."
+                        }
+                    },
+                    {
+                        "contradiction": "Reviewer 1 mentions that the results are generally intuitive and reasonable enough to be credible, while Reviewer 2 states that the experiments are small and should be easy to reproduce but questions their complexity.",
+                        "aspect": "substance",
+                        "evidence": [
+                            "The results are generally intuitive and reasonable enough to be credible as indicators of how compositionality relates to aspects of learning.",
+                            "On the one hand, I like the pedagogical nature of the experiments. ... all of them seem to be fairly similar kinds of composition with very few attributes."
+                        ],
+                        "intensity": {
+                            "score": 2,
+                            "justification": "There are moderate substantive differences between the reviewers regarding the credibility and complexity of the results, which could be addressed with clarification or additional data."
+                        }
+                    },
+                    {
+                        "contradiction": "Reviewer 1 appreciates the comparison to human judgments, while Reviewer 2 does not mention this aspect and focuses on the limitations of the experiments.",
+                        "aspect": "meaningful comparison",
+                        "evidence": [
+                            "I appreciate the comparison to human judgments, which lends credibility to applicability of the framework.",
+                            "I\u2019m a bit torn about the experiments."
+                        ],
+                        "intensity": {
+                            "score": 2,
+                            "justification": "The reviewers express differing opinions on the importance of comparing to human judgments, indicating a moderate disagreement that could be addressed with clarification or additional data regarding the experiments."
+                        }
+                    }
+                ],
+                "additional_analysis": [
+                    {
+                        "contradiction": "Reviewer 1 explicitly states that the conclusions drawn may not generalize to other tasks or composition operators. Reviewer 2, while acknowledging the simplicity of the experiments, focuses more on the limited types of compositions explored and their potential impact on the generalizability of the findings.",
+                        "aspect": "Generalization",
+                        "evidence": [
+                            "Reviewer 1: 'conclusions drawn can not be construed to apply to compositionality as a general concept, but rather to compositionality when defined by these particular operators.",
+                            "Reviewer 2: 'whether the intuitions hold for more complex compositional structures is hard to say."
+                        ],
+                        "intensity": {
+                            "score": 3,
+                            "justification": "This contradiction directly addresses the core question of the study: How well does the proposed framework capture the essence of compositionality in a generalizable way? The disagreement lies in the scope of generalization: Reviewer 1 emphasizes generalization across tasks, while Reviewer 2 highlights the importance of generalizing across different types of compositional structures. This disagreement is fundamental to understanding the limitations and potential impact of the proposed framework."
+                        }
+                    }
+                ],
+                "gpt-4 analysis": [
+                    {
+                        "analysis": [
+                            {
+                                "contradiction": "Review 1 finds the paper clearly written, whereas Review 2 claims the presentation is overly confusing.",
+                                "aspect": "Clarity of Presentation",
+                                "evidence": [
+                                    "Review 1: 'The paper is clearly written.'",
+                                    "Review 2: 'I found the presentation of the proposed measure overly confusing.'"
+                                ],
+                                "intensity": {
+                                    "score": 3,
+                                    "justification": "There is a high contrast between the reviewers' perceptions of the paper's clarity, indicating a significant contradiction. This contradiction could influence the paper's accessibility and understanding among its readers, suggesting a need for the authors to revise for greater clarity and conciseness."
+                                }
+                            },
+                            {
+                                "contradiction": "Review 1 appreciates the experimental scope as reasonable, while Review 2 calls for a broader range of experiments.",
+                                "aspect": "Experiment Scope",
+                                "evidence": [
+                                    "Review 1: 'The reported experiments cover reasonable ground in terms of questions relevant to compositionality.'",
+                                    "Review 2: 'On the other hand, all of them seem to be fairly similar kinds of composition with very few attributes (mostly bigrams).'"
+                                ],
+                                "intensity": {
+                                    "score": 2,
+                                    "justification": "While Review 1 is satisfied with the scope of the experiments, Review 2 raises concerns about their depth and diversity, indicating a moderate contradiction. This calls for an expansion in experimental scope to better support the paper's claims across more complex compositional structures."
+                                }
+                            },
+                            {
+                                "contradiction": "Both reviews discuss the novelty of the framework, but Review 2 is more critical about its practical implementation.",
+                                "aspect": "Framework Novelty and Implementation",
+                                "evidence": [
+                                    "Review 1: 'Overall I think this is a solid paper, with an interesting and reasonable approach to quantifying compositionality...'",
+                                    "Review 2: 'The paper tackles a very interesting problem... However, I\u2019m a bit torn about the experiments.'"
+                                ],
+                                "intensity": {
+                                    "score": 1,
+                                    "justification": "Both reviews acknowledge the novelty of the approach, but Review 2 expresses reservations about how the experiments support the theoretical framework, presenting a mild contradiction. This suggests the need for more detailed experimental evidence to fully validate the framework's claims."
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "pair_number": 3,
+                "review_pair": [
+                    "Edit and a further question : Reading again Section 7 , I 'm wondering whether the the high generalization is possible due to the fact that at test time only one of the two candidates is unseen , and the other is seen . Having * both* candidates to be unseen makes the problem significantly harder since the only way for the listener to get it right is to associate the message with the right candidate , rather than relying in some other strategy like whether the message is novel ( thus it 's the seen candidate ) or new ( thus it 's the unseen candidate ) . As such , I do n't think I can fully trust your conclusions due to this potential confounder . -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- The authors propose a measure of compositionality in representations . Given instances of data x annotated with semantic primitives , the authors learn a vector for each of the primitive such that the addition of the vectors of the primitives is very close ( in terms of cosine ) to the latent representation z of the input x . The authors find that this measure correlates with the mutual information between the input x and z , approximates the human judges of compositionality on a language dataset and finally presents a study on the relation between the proposed measure and generalizalization performance , concluding that their measure correlates with generalization error as well as absolute test accuracy . This in an interesting study and attacks a very fundamental question ; tracking compositionality in representations could pave the way towards representations that facilitate transfer learning and better generalization . While the paper is very clear with respects to results , I found the presentation of the proposed measure overly confusing ( and somewhat more exaggerated that what is really going on ) . The authors start with a very clean example , that can potentially facilitate clarifying in a visual way the process of obtaining the measure . However , I feel that clarity is being traded-off for formality . It needs several reads to really distill the idea that essentially the authors are simply learning vectors of primitives that when added should resemble the representation of the input . Moreover , the name of the measure is a bit misleading and not justified by the experiments and the data . The authors do not deal with trees in any of the examples , but rather with a set of primitives ( apparent in the use of addition as a composition function which being commutative does not allow for word-order and the like deep syntactic properties ) . Now , onto the measure . I like the idea of learning basis vectors from the representations and constraining to follow the primitive semantics . Of course , this constraints quite a bit the form of compositionality that the authors are searching for . The idea of additive semantics has been explored in NLP , however it 's mostly applicable for primitives with intersective semantics ( e.g. , a white towel is something that is both white and a towel ) . Do the authors think that this restricts their experiments ( especially the natural languages ones ) ? What about other composition techniques found in the literature of compositional semantics ( e.g. , by Baroni and Zamparelli , 2010 ) . This is good to be clarified . Moreover , given the simplicity of the datasets in the current study , would n't a reasonable baseline be to obtain the basis vector of blue by averaging all the latent representations of blue ? Similarly , how sensitive are conclusions with respect to different composition functions ? Section 4 is potentially very interesting , but I do n't seem to understand why it 's good news that TRE correlates with I ( x ; \\theta ) . Low TRE indicates high-degree of compositionality . I suspect that low MI means that input and latent representation are somewhat independent but I do n't see the connection to compositional components . Can the authors clarify ? Section 5 is a nice addition . The authors mention that they learn word and phrase representations . Where are the word representations used ? My understanding is that you derive basis word representations by using SGD and the phrase vectors and compute TRE with these . If this is the case , an interesting experiment would be to report how similar the induced basis vectors are ( either some first-order or second-order similarity ) to the pre-trained ones . Section 8 presents results on discrete representations . Since this is the experiment most similar to the recent work that uses topographic similarity ( and since the authors already prime the reader at section 7 about relation between the 2 measures ) , it would be interesting to see the empirical relation between TRE and topographic and its relation to generalization and absolute performance . Baroni and Zamparelli ( 2010 ) Nouns are vectors , adjectives are matrices : Representing adjective-noun constructions in semantic space",
+                    "The paper tackles a very interesting problem about representations , especially of the connectionist kind -- how do we know if the learned representations capture the compositional structure present in the inputs , and tries to come up with a systematic framework to answer that question . The framework assumes the presence of an oracle that can give us the true compositional structure . Then the author try to answer some refreshing questions about the dynamics of learning and compositionality while citing some interesting background reading . However , I \u2019 m a bit torn about the experiments . On the one hand , I like the pedagogical nature of the experiments . They are small and should be easy to reproduce . On the other hand , all of them seem to be fairly similar kinds of composition with very few attributes ( mostly bigrams ) . So whether the intuitions hold for more complex compositional structures is hard to say . Nevertheless , it \u2019 s a well written paper and is a helpful first step towards studying the problem of compositionality in vector representations . Minor points Pg 3 \u201c _grammar_ for composing meanings * where* licensed by derivations \u201d seems incorrect . Figure 5 : seems quite noisy to make the linear relationship claim EDIT : I still think the compositions under consideration are the simpler ones . Still with the new experiments the coverage seems nicer . Given the authors plan to release their source code , I expect there will be an opportunity for the rest of the community to build on these , to test TRE 's efficacy on more complex compositions . I updated my scores to reflect the change ."
+                ],
+                "analysis": [
+                    {
+                        "contradiction": "Review 1 expresses skepticism about the conclusions of the paper due to a potential confounder, while Review 2 suggests that the paper is a helpful first step towards studying the problem of compositionality.",
+                        "aspect": "soundness",
+                        "evidence": {
+                            "Review 1": "I do n't think I can fully trust your conclusions due to this potential confounder.",
+                            "Review 2": "Nevertheless, it \u2019s a well written paper and is a helpful first step towards studying the problem of compositionality in vector representations."
+                        },
+                        "intensity": {
+                            "score": 2,
+                            "justification": "Review 1 raises a significant concern about a potential confounder that questions the validity of the conclusions, while Review 2 acknowledges the paper's contribution as a first step. This indicates a moderate difference in opinion regarding the soundness of the findings, suggesting that further clarification or data could address the issue."
+                        }
+                    },
+                    {
+                        "contradiction": "Review 1 finds the presentation of the proposed measure overly confusing, while Review 2 describes the paper as well written.",
+                        "aspect": "presentation",
+                        "evidence": {
+                            "Review 1": "I found the presentation of the proposed measure overly confusing.",
+                            "Review 2": "Nevertheless, it \u2019s a well written paper."
+                        },
+                        "intensity": {
+                            "score": 2,
+                            "justification": "The reviews present moderate differences in opinion regarding the presentation of the proposed measure. Review 1 finds it confusing, while Review 2 considers the paper well written, indicating a substantive disagreement that could be addressed with clarification or revisions."
+                        }
+                    },
+                    {
+                        "contradiction": "Review 1 doubts the clarity of the proposed measure, while Review 2 appreciates the pedagogical nature of the experiments.",
+                        "aspect": "clarity",
+                        "evidence": {
+                            "Review 1": "I feel that clarity is being traded-off for formality.",
+                            "Review 2": "On the one hand, I like the pedagogical nature of the experiments."
+                        },
+                        "intensity": {
+                            "score": 2,
+                            "justification": "The reviews present moderate differences in opinions regarding clarity, with one review criticizing it and the other appreciating the pedagogical aspect. This indicates a substantive difference that could be addressed with clarification, but it doesn't raise fundamental validity issues."
+                        }
+                    },
+                    {
+                        "contradiction": "Review 1 questions the generalization performance due to the simplicity of the datasets, while Review 2 acknowledges the experiments as a first step towards studying compositionality.",
+                        "aspect": "impact",
+                        "evidence": {
+                            "Review 1": "Given the simplicity of the datasets in the current study, would n't a reasonable baseline be to obtain the basis vector of blue by averaging all the latent representations of blue?",
+                            "Review 2": "Nevertheless, it \u2019s a well written paper and is a helpful first step towards studying the problem of compositionality in vector representations."
+                        },
+                        "intensity": {
+                            "score": 2,
+                            "justification": "The reviews present moderate differences in opinion regarding the generalization performance of the study due to dataset simplicity versus its value as a first step in studying compositionality. This indicates a substantive disagreement that could be addressed with additional clarification or data."
+                        }
+                    }
+                ],
+                "additional_analysis": [
+                    {
+                        "contradiction": "Reviewer 1 strongly criticizes the limited scope of compositionality explored, focusing on the use of additive semantics and questioning its applicability beyond intersective semantics. Reviewer 2, while acknowledging the limitations of the current experiments, focuses more on the generalizability of the findings to more complex compositions and suggests that the current work serves as a valuable starting point.",
+                        "aspect": "Scope and Limitations",
+                        "evidence": [
+                            "Reviewer 1: 'The idea of additive semantics has been explored in NLP, however it's mostly applicable for primitives with intersective semantics... Do the authors think that this restricts their experiments (especially the natural languages ones)? What about other composition techniques found in the literature of compositional semantics (e.g., by Baroni and Zamparelli, 2010 ) . This is good to be clarified.'",
+                            "Reviewer 2: '...all of them seem to be fairly similar kinds of composition with very few attributes (mostly bigrams) ... whether the intuitions hold for more complex compositional structures is hard to say.'"
+                        ],
+                        "intensity": {
+                            "score": 3,
+                            "justification": "This contradiction highlights a fundamental disagreement on the primary limitation of the current work. Reviewer 1 emphasizes the narrow scope of compositionality explored, while Reviewer 2 prioritizes the limited complexity of the compositions investigated. This difference in perspective has significant implications for the future directions of the research."
+                        }
+                    }
+                ],
+                "gpt-4 analysis": [
+                    {
+                        "analysis": [
+                            {
+                                "contradiction": "Review 1 questions the generalizability of the conclusions due to the experimental design, whereas Review 2 accepts the experimental scope but suggests it could be broader.",
+                                "aspect": "Generalization and Experimental Design",
+                                "evidence": [
+                                    "Review 1: 'I'm wondering whether the high generalization is possible due to the fact that at test time only one of the two candidates is unseen, and the other is seen...I don't think I can fully trust your conclusions due to this potential confounder.'",
+                                    "Review 2: 'They are small and should be easy to reproduce... However, all of them seem to be fairly similar kinds of composition with very few attributes (mostly bigrams).'"
+                                ],
+                                "intensity": {
+                                    "score": 3,
+                                    "justification": "There is a significant contradiction in the reviewers' trust in the experimental design's ability to support the conclusions. Review 1 expresses strong doubts about the validity of the experimental setup affecting generalizability, whereas Review 2, while noting the simplicity of the experiments, still sees them as a useful starting point. This contradiction highlights fundamental concerns about the experimental framework that could affect the perceived robustness of the study's findings."
+                                }
+                            },
+                            {
+                                "contradiction": "Review 1 finds the presentation of the measure confusing and possibly misleading, while Review 2 praises the clarity of the paper but criticizes the complexity of the presented experiments.",
+                                "aspect": "Clarity and Presentation",
+                                "evidence": [
+                                    "Review 1: 'While the paper is very clear with respects to results, I found the presentation of the proposed measure overly confusing...'",
+                                    "Review 2: 'Nevertheless, it\u2019s a well written paper and is a helpful first step towards studying the problem of compositionality in vector representations.'"
+                                ],
+                                "intensity": {
+                                    "score": 2,
+                                    "justification": "This represents a moderate contradiction in the perceived clarity and presentation of the paper. Review 1 indicates that the complexity and presentation of the core measure may not be effectively communicated, finding it confusing and not well-justified. In contrast, Review 2 finds the overall paper well-written but hints at an over-simplification in experimental design, which indirectly questions the depth of presentation. The contradiction suggests that while the paper may be generally clear, specific aspects of its methodology might benefit from more detailed exposition to align perceptions."
+                                }
+                            },
+                            {
+                                "contradiction": "Review 1 is concerned about the applicability of the chosen composition function and its impact on the study's conclusions, while Review 2 acknowledges the simplicity but appreciates the pedagogical nature of the experiments.",
+                                "aspect": "Applicability of Composition Function",
+                                "evidence": [
+                                    "Review 1: 'Moreover, the name of the measure is a bit misleading and not justified by the experiments and the data. The authors do not deal with trees in any of the examples...'",
+                                    "Review 2: 'On the one hand, I like the pedagogical nature of the experiments... On the other hand, all of them seem to be fairly similar kinds of composition with very few attributes (mostly bigrams).'"
+                                ],
+                                "intensity": {
+                                    "score": 2,
+                                    "justification": "The contradiction here is moderate, focusing on the suitability and explanatory power of the composition function used in the experiments. Review 1 raises concerns about the misleading naming and potential limitations in the conceptual framework, questioning its broader applicability. Review 2, while noting the simplicity and potential limitations of the compositional attributes tested, still values the educational aspect of the experimental approach. This suggests a need for clearer justification of the composition function and possibly broader experimental validation to enhance the study's applicability."
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+"NIPS_2019_175": {
+    "Review_1": {
+        "Strengths : + Proposes a new normalisation statistics-based method for DA .": [
+            [
+                "originality",
+                "positive"
+            ]
+        ],
+        "This line of attack against the domain-adaptation problem is rather under-studied compared to other approaches .": [
+            [
+                "originality",
+                "negative"
+            ],
+            [
+                "motivation",
+                "negative"
+            ]
+        ],
+        "+ A good range of benchmarks .": [
+            [
+                "substance",
+                "positive"
+            ]
+        ],
+        "Addressing domain-shift via domain specific moments is not new .": [
+            [
+                "originality",
+                "negative"
+            ]
+        ],
+        "2 .Justification & analysis : A normalisation-layer based algorithm is proposed , but without much theoretical analysis to justify the specific choices .": [
+            [
+                "soundness",
+                "negative"
+            ]
+        ],
+        "However , this spin is a bit misleading .": [
+            [
+                "clarity",
+                "negative"
+            ]
+        ],
+        "4 .The evaluation is a good start with comparing several base DA methods with and without the proposed TransferNorm architecture .": [
+            [
+                "meaningful",
+                "positive"
+            ],
+            [
+                "substance",
+                "positive"
+            ],
+            [
+                "soundness",
+                "positive"
+            ]
+        ],
+        "It would be stronger if the base DA methods were similarly evaluated with/without the architectural competitors such as AutoDial and AdaBN that are direct competitors to TN .": [
+            [
+                "meaningful",
+                "negative"
+            ]
+        ],
+        "5 .English is full of errors throughout .": [
+            [
+                "clarity",
+                "negative"
+            ]
+        ],
+        "Evaluation on multiple base DA methods and network backbones .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "+ Analysis Sec 4.4 is interesting .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "It was done among others by Bilen & Vedaldi , 2017 , \u00e2\u0080\u009dUniversal representations : The missing link between faces , text , planktons , and cat breeds\u00e2\u0080\u009d .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "Although this paper may have made some better design decisions about exactly how to do it .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "EG : Why is is exactly : that gamma and beta should be domain-agnostic , but alpha should be domain specific .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "3 .Positioning wrt AutoDial , etc : The paper claims \u00e2\u0080\u009cparameter-free\u00e2\u0080\u009d as a strength compared to AutoDIAL , which has a domain-mixing parameter .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "It removes one learnable parameter , but instead includes a somewhat complicated heuristic Eq 5-7 governing transferability .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "It\u00e2\u0080\u0099s not clear that removing a single parameters ( which is learned in AutoDIAL ) with a complicated heuristic function ( which is hand-crafted here ) is a clear win .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "`` Seldom previous works `` , etc .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "-- -- -- Update -- -- - The authors response did a decent job of responding to the concerns .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "The paper could be reasonable to accept .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "I hope the authors can update the paper with the additional information from the response .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ]
+    },
+    "Review_1_full": "Strengths : + Proposes a new normalisation statistics-based method for DA . This line of attack against the domain-adaptation problem is rather under-studied compared to other approaches . + A good range of benchmarks . Evaluation on multiple base DA methods and network backbones . + Analysis Sec 4.4 is interesting . Weaknesses : 1 . Weak novelty . Addressing domain-shift via domain specific moments is not new . It was done among others by Bilen & Vedaldi , 2017 , \u00e2\u0080\u009dUniversal representations : The missing link between faces , text , planktons , and cat breeds\u00e2\u0080\u009d . Although this paper may have made some better design decisions about exactly how to do it . 2 .Justification & analysis : A normalisation-layer based algorithm is proposed , but without much theoretical analysis to justify the specific choices . EG : Why is is exactly : that gamma and beta should be domain-agnostic , but alpha should be domain specific . 3 .Positioning wrt AutoDial , etc : The paper claims \u00e2\u0080\u009cparameter-free\u00e2\u0080\u009d as a strength compared to AutoDIAL , which has a domain-mixing parameter . However , this spin is a bit misleading . It removes one learnable parameter , but instead includes a somewhat complicated heuristic Eq 5-7 governing transferability . It\u00e2\u0080\u0099s not clear that removing a single parameters ( which is learned in AutoDIAL ) with a complicated heuristic function ( which is hand-crafted here ) is a clear win . 4 .The evaluation is a good start with comparing several base DA methods with and without the proposed TransferNorm architecture . It would be stronger if the base DA methods were similarly evaluated with/without the architectural competitors such as AutoDial and AdaBN that are direct competitors to TN . 5 .English is full of errors throughout . `` Seldom previous works `` , etc . -- -- -- Update -- -- - The authors response did a decent job of responding to the concerns . The paper could be reasonable to accept . I hope the authors can update the paper with the additional information from the response .",
+    "Review_2_full": "This paper is different from most works focus on reducing the domain shift from perspective of loss functions , contributing to network design by developing a novel transferable normalization ( TranNorm ) layer . TranNorm is well motivated , separately normalizing source and target features in a minibatch and meanwhile weighting each channel in terms of transferability . It is clear different from and meanwhile significantly outperformes related methods , e.g. , AdaBN [ 15 ] and AutoDIAL [ 21 ] . The TranNorm layer is simple and free of parameters , which can be conveniently plugged in mainstream networks . I think that this work will have a non-trivial impact : the proposed TranNorm can be used as backbone layer improving other state-of-the-art methods . The experiments are extensively evaluated both qualitatively and quantitively , demonstrating the effectiveness of the proposed TranNorm . The TranNorm layer is key contribution of this paper . This layer consists of separately normalizing the source and target features , followed by weighting with $ \\alpha $ with respect to transferability , which is empirically defined . I would like to see ablation analysis on $ \\alpha $ : what will the performance be if one sets $ \\alpha=1 $ , and what will the performance be if the transferability is defined as softmax or Gaussian with tunable variance over discrepancy of statistics , i.e. , $ \\mu/\\sqrt { \\sigma^2+\\epsilon } $ ( rather than only $ \\mu $ ) . -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- - One of my comments is that what the performance will be if the two probabilities build upon $ \\mu/\\sqrt { \\sigma^2+\\epsilon } $ , rather than only $ \\mu $ . However , after reading the rebuttal , I still can not see what kind of distances are used in the probabilities of softmax and Gaussian , from the second table and analysis therein . Note that I check the submitted code in trans_norm.py ( lines 152 and 156 ) , finding that the two probabilities build upon only $ \\mu $ . I wish the authors make further clarification and perform corresponding experiments in the final version . I keep my original recommendation unchanged .",
+    "Review_2": {
+        "TranNorm is well motivated , separately normalizing source and target features in a minibatch and meanwhile weighting each channel in terms of transferability .": [
+            [
+                "motivation",
+                "positive"
+            ]
+        ],
+        "I would like to see ablation analysis on $ \\alpha $ : what will the performance be if one sets $ \\alpha=1 $ , and what will the performance be if the transferability is defined as softmax or Gaussian with tunable variance over discrepancy of statistics , i.e.": [
+            [
+                "substance",
+                "negative"
+            ]
+        ],
+        "This paper is different from most works focus on reducing the domain shift from perspective of loss functions , contributing to network design by developing a novel transferable normalization ( TranNorm ) layer .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "It is clear different from and meanwhile significantly outperformes related methods , e.g.": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        ", AdaBN [ 15 ] and AutoDIAL [ 21 ] .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "The TranNorm layer is simple and free of parameters , which can be conveniently plugged in mainstream networks .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "I think that this work will have a non-trivial impact : the proposed TranNorm can be used as backbone layer improving other state-of-the-art methods .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "The experiments are extensively evaluated both qualitatively and quantitively , demonstrating the effectiveness of the proposed TranNorm .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "The TranNorm layer is key contribution of this paper .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "This layer consists of separately normalizing the source and target features , followed by weighting with $ \\alpha $ with respect to transferability , which is empirically defined .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        ", $ \\mu/\\sqrt { \\sigma^2+\\epsilon } $ ( rather than only $ \\mu $ ) .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- - One of my comments is that what the performance will be if the two probabilities build upon $ \\mu/\\sqrt { \\sigma^2+\\epsilon } $ , rather than only $ \\mu $ .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "However , after reading the rebuttal , I still can not see what kind of distances are used in the probabilities of softmax and Gaussian , from the second table and analysis therein .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "Note that I check the submitted code in trans_norm.py ( lines 152 and 156 ) , finding that the two probabilities build upon only $ \\mu $ .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "I wish the authors make further clarification and perform corresponding experiments in the final version .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ],
+        "I keep my original recommendation unchanged .": [
+            [
+                "no_aspect",
+                "no_sentiment"
+            ]
+        ]
+    },
+    "review_pairs": [
+        [
+            "Strengths : + Proposes a new normalisation statistics-based method for DA . This line of attack against the domain-adaptation problem is rather under-studied compared to other approaches . + A good range of benchmarks . Evaluation on multiple base DA methods and network backbones . + Analysis Sec 4.4 is interesting . Weaknesses : 1 . Weak novelty . Addressing domain-shift via domain specific moments is not new . It was done among others by Bilen & Vedaldi , 2017 , \u00e2\u0080\u009dUniversal representations : The missing link between faces , text , planktons , and cat breeds\u00e2\u0080\u009d . Although this paper may have made some better design decisions about exactly how to do it . 2 .Justification & analysis : A normalisation-layer based algorithm is proposed , but without much theoretical analysis to justify the specific choices . EG : Why is is exactly : that gamma and beta should be domain-agnostic , but alpha should be domain specific . 3 .Positioning wrt AutoDial , etc : The paper claims \u00e2\u0080\u009cparameter-free\u00e2\u0080\u009d as a strength compared to AutoDIAL , which has a domain-mixing parameter . However , this spin is a bit misleading . It removes one learnable parameter , but instead includes a somewhat complicated heuristic Eq 5-7 governing transferability . It\u00e2\u0080\u0099s not clear that removing a single parameters ( which is learned in AutoDIAL ) with a complicated heuristic function ( which is hand-crafted here ) is a clear win . 4 .The evaluation is a good start with comparing several base DA methods with and without the proposed TransferNorm architecture . It would be stronger if the base DA methods were similarly evaluated with/without the architectural competitors such as AutoDial and AdaBN that are direct competitors to TN . 5 .English is full of errors throughout . `` Seldom previous works `` , etc . -- -- -- Update -- -- - The authors response did a decent job of responding to the concerns . The paper could be reasonable to accept . I hope the authors can update the paper with the additional information from the response .",
+            "This paper is different from most works focus on reducing the domain shift from perspective of loss functions , contributing to network design by developing a novel transferable normalization ( TranNorm ) layer . TranNorm is well motivated , separately normalizing source and target features in a minibatch and meanwhile weighting each channel in terms of transferability . It is clear different from and meanwhile significantly outperformes related methods , e.g. , AdaBN [ 15 ] and AutoDIAL [ 21 ] . The TranNorm layer is simple and free of parameters , which can be conveniently plugged in mainstream networks . I think that this work will have a non-trivial impact : the proposed TranNorm can be used as backbone layer improving other state-of-the-art methods . The experiments are extensively evaluated both qualitatively and quantitively , demonstrating the effectiveness of the proposed TranNorm . The TranNorm layer is key contribution of this paper . This layer consists of separately normalizing the source and target features , followed by weighting with $ \\alpha $ with respect to transferability , which is empirically defined . I would like to see ablation analysis on $ \\alpha $ : what will the performance be if one sets $ \\alpha=1 $ , and what will the performance be if the transferability is defined as softmax or Gaussian with tunable variance over discrepancy of statistics , i.e. , $ \\mu/\\sqrt { \\sigma^2+\\epsilon } $ ( rather than only $ \\mu $ ) . -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- - One of my comments is that what the performance will be if the two probabilities build upon $ \\mu/\\sqrt { \\sigma^2+\\epsilon } $ , rather than only $ \\mu $ . However , after reading the rebuttal , I still can not see what kind of distances are used in the probabilities of softmax and Gaussian , from the second table and analysis therein . Note that I check the submitted code in trans_norm.py ( lines 152 and 156 ) , finding that the two probabilities build upon only $ \\mu $ . I wish the authors make further clarification and perform corresponding experiments in the final version . I keep my original recommendation unchanged ."
+        ]
+    ]
+    }
+}
